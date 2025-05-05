@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: adidas
+    database: ADIDAS
+    schema: ADIDAS_SCHEMA
+    tables:
+      - name: RAW_ADIDAS_SALES
