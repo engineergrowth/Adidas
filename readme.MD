@@ -4,7 +4,7 @@
 This project showcases a complete data pipeline and dashboard solution for analyzing Adidas US sales data. It covers data extraction using Python, transformation and modeling in dbt, and visualization in Power BI. The final output is a dynamic, filterable dashboard highlighting key sales insights by product, retailer, and sales method.
 
 ## Key Features
-- Extracted and cleaned sales data using Python and Pandas  
+- Extracted and parsed sales data using Python and Pandas  
 - Loaded raw sales data into Snowflake using SQLAlchemy  
 - Modeled a star schema using dbt (dimensions and fact tables)  
 - Built a Power BI dashboard with interactive KPIs and visualizations  
@@ -23,7 +23,7 @@ The dataset was sourced from Kaggle and includes Adidas US sales figures such as
 **Pipeline Flow:**  
 ```mermaid 
 flowchart TD
-    Excel[Source: Excel Sales File] --> Python[Clean & Load with Python]
+    Excel[Source: Excel Sales File] --> Python[Parse & Load with Python]
     Python --> SnowflakeRaw[Snowflake - Raw Table]
     SnowflakeRaw --> dbt[Transform with dbt]
     dbt --> SnowflakeModels[Snowflake - Dimensional Models]
