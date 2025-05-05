@@ -4,7 +4,7 @@ select
     -- Foreign Keys
     loc.location_id,
     prod.product_id,
-    ret.retailer_id,
+    ret.retailer,
     dd.date_day,
 
     -- Measures / Facts
@@ -12,7 +12,8 @@ select
     stg.price_per_unit,
     stg.units_sold,
     stg.operating_profit,
-    stg.operating_margin
+    stg.operating_margin,
+    stg.total_sales
 
 
 from {{ ref('stg_adidas_sales') }} stg
